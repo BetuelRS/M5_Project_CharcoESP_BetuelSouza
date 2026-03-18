@@ -83,4 +83,16 @@ include BASE_PATH . 'db.php';
             </table>
         </div>
     </div>
+    <!-- Card Gráfico de Leituras (exemplo para um sensor específico) dos ultimos 30 dias -->
+    <div class="dashboard-card card-readings-chart full-width">
+        <div class="card-header">
+            <div class="card-icon">
+                <i class="fas fa-chart-bar"></i>
+            </div>
+            <h3>Leituras Últimos 30 Dias (Temperatura)</h3>
+        </div>
+        <div class="card-chart">
+            <canvas id="readingsChart"></canvas>
+            
+        </div>
 </div>
