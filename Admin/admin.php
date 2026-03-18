@@ -53,7 +53,7 @@ include BASE_PATH . 'db.php';
 
     </main>
     <footer>
-        <?php include 'struct/footer.php'; ?>
+        <?php include '../struct/footer.php'; ?>
     </footer>
 </body>
 </html>
