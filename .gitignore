@@ -1,9 +1,9 @@
 # Ignorar ficheiros sensíveis
-config.php
+#config.php
 
 # Node / temp (caso uses no futuro)
-node_modules/
+#node_modules/
 
 # Sistema
-.DS_Store
-Thumbs.db
+#.DS_Store
+#Thumbs.db
