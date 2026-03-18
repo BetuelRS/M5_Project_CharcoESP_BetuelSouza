@@ -58,27 +58,37 @@ $stmt->close();
         <?php include '../struct/header.php'; ?>
     </header>
     <main class="conteudo">
-        <h1>Editar Utilizador</h1>
-        <form action="<?= BASE_URL ?>Admin/utilizadores_edit.php" method="POST" class="formulario">
+        <h1 class="admin-title">Editar Utilizador</h1>
+        <form action="<?= BASE_URL ?>Admin/utilizadores_edit.php" method="POST" class="admin-form">
             <input type="hidden" name="id" value="<?= $user['cod_utilizador'] ?>">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" value="<?= htmlspecialchars($user['username']) ?>" required>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" value="<?= htmlspecialchars($user['username']) ?>" required>
+            </div>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" value="<?= htmlspecialchars($user['password']) ?>" required>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" value="<?= htmlspecialchars($user['password']) ?>" required>
+            </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" value="<?= htmlspecialchars($user['email']) ?>" required>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<?= htmlspecialchars($user['email']) ?>" required>
+            </div>
 
-            <label for="nome_completo">Nome Completo:</label>
-            <input type="text" id="nome_completo" name="nome_completo" value="<?= htmlspecialchars($user['nome_completo']) ?>" required>
+            <div class="form-group">
+                <label for="nome_completo">Nome Completo:</label>
+                <input type="text" id="nome_completo" name="nome_completo" value="<?= htmlspecialchars($user['nome_completo']) ?>" required>
+            </div>
 
-            <label for="admin">
-                <input type="checkbox" id="admin" name="admin" <?= $user['ADMIN'] ? 'checked' : '' ?>>
-                Administrador
-            </label>
+            <div class="form-group">
+                <label for="admin">
+                    Administrador
+                    <input type="checkbox" id="admin" name="admin" <?= $user['ADMIN'] ? 'checked' : '' ?>>
+                </label>
+            </div>
 
-            <button type="submit" class="btn">Salvar Alterações</button>
+            <button type="submit" class="btn-submit">Salvar Alterações</button>
         </form>
     </main>
     <footer>

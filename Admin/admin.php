@@ -18,15 +18,17 @@ include BASE_PATH . 'db.php';
         <?php include '../struct/header.php'; ?>
     </header>
     <main class="conteudo">
-        <h1>Gerir Utilizadores</h1>
-        <a href="<?= BASE_URL ?>Admin/utilizadores_add.php" class="btn">Adicionar Novo Utilizador</a>
-        <table class="tabela">
+        <h1 class="admin-title">Gerir Utilizadores</h1>
+        <a href="<?= BASE_URL ?>Admin/utilizadores_add.php" class="admin-action-btn">Adicionar Novo Utilizador</a>
+        <table class="admin-table">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
+                    <th>Codigo</th>
+                    <th>Username</th>
+                    <th>Password</th>
                     <th>Email</th>
-                    <th>Tipo</th>
+                    <th>Nome Completo</th>
+                    <th>Admin</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -42,8 +44,8 @@ include BASE_PATH . 'db.php';
                     echo "<td>{$row['email']}</td>";
                     echo "<td>{$row['nome_completo']}</td>";
                     echo "<td>{$row['ADMIN']}</td>";
-                    echo "<td><a href='" . BASE_URL . "Admin/utilizadores_edit.php?id={$row['cod_utilizador']}' class='btn'>Editar</a> ";
-                    echo "<a href='" . BASE_URL . "Admin/utilizadores_delete.php?id={$row['cod_utilizador']}' class='btn btn-danger' onclick='return confirm(\"Tem certeza que deseja excluir este utilizador?\")'>Excluir</a></td>";
+                    echo "<td><a href='" . BASE_URL . "Admin/utilizadores_edit.php?id={$row['cod_utilizador']}' class='admin-action-btn'>Editar</a> ";
+                    echo "<a href='" . BASE_URL . "Admin/utilizadores_delete.php?id={$row['cod_utilizador']}' class='admin-action-btn btn-danger' onclick='return confirm(\"Tem certeza que deseja excluir este utilizador?\")'>Excluir</a></td>";
                     echo "</tr>";
                 }
                 $conn->close();

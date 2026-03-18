@@ -1101,3 +1101,119 @@
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(46, 125, 50, 0.3);
 }
+
+/* ===== Pagina de Admin ===== */
+.admin-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+/*tabela de admin*/
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+.admin-table th,
+.admin-table td {
+    padding: 0.8rem;
+    border: 1px solid var(--light-gray);
+    text-align: left;
+}   
+.admin-table thead {
+    background: linear-gradient(135deg, var(--primary-green), #1b5e20);
+    color: white;
+}
+/*Botao de acao do admin*/
+.admin-action-btn {
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+.admin-action-btn:hover {
+    background-color: #bdbdbd;
+    color: var(--dark-gray);
+    transform: scale(1.1);
+}
+.admin-action-btn.delete {
+    background-color: #ffebee;
+    color: #c62828;
+}
+.admin-action-btn.delete:hover {
+    background-color: #c62828;
+    color: white;
+    transform: scale(1.1);
+}
+.admin-title {
+    color: var(--primary-green);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+.admin-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--water-blue), var(--light-green));
+    border-radius: 2px;
+}
+/* formulario de admin */
+.admin-form {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+.admin-form .form-group {
+    margin-bottom: 1.5rem;
+}
+.admin-form .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-green);
+    font-weight: 500;
+}
+.admin-form .form-group input,
+.admin-form .form-group select,
+.admin-form .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--light-gray);
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.3s;
+}
+.admin-form .form-group input:focus,
+.admin-form .form-group select:focus,   
+.admin-form .form-group textarea:focus {
+    outline: none;
+    border-color: var(--light-green);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+.admin-form .btn-submit {
+    background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    font-size: 1rem;
+}
+.admin-form .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(46, 125, 50, 0.3);
+}

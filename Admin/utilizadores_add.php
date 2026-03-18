@@ -42,26 +42,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php include '../struct/header.php'; ?>
     </header>
     <main class="conteudo">
-        <h1>Adicionar Novo Utilizador</h1>
-        <form action="<?= BASE_URL ?>Admin/utilizadores_add.php" method="POST" class="formulario">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+        <h1 class="admin-title">Adicionar Novo Utilizador</h1>
+        <form action="<?= BASE_URL ?>Admin/utilizadores_add.php" method="POST" class="admin-form">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
-            <label for="nome_completo">Nome Completo:</label>
-            <input type="text" id="nome_completo" name="nome_completo" required>
+            <div class="form-group">
+                <label for="nome_completo">Nome Completo:</label>
+                <input type="text" id="nome_completo" name="nome_completo" required>
+            </div>
 
-            <label for="admin">
-                <input type="checkbox" id="admin" name="admin">
-                Administrador
-            </label>
+            <div class="form-group">
+                <label for="admin">
+                    
+                    Administrador
+                    <input type="checkbox" id="admin" name="admin">
+                </label>
+            </div>
 
-            <button type="submit" class="btn">Adicionar Utilizador</button>
+            <button type="submit" class="btn-submit">Adicionar Utilizador</button>
+
         </form>
     </main>
     <footer>

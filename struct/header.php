@@ -21,7 +21,7 @@
                     <li><a href="<?= BASE_URL ?>SN/Sensores.php" class="nav-link <?= strpos($_SERVER['PHP_SELF'], 'Sensores.php') !== false ? 'active' : '' ?>">Sensores</a></li>
                     
                     <?php if ($_SESSION['user_admin']): ?>
-                        <li><a href="<?= BASE_URL ?>admin/" class="nav-link <?= strpos($_SERVER['PHP_SELF'], 'admin/') !== false ? 'active' : '' ?>">Admin</a></li>
+                        <li><a href="<?= BASE_URL ?>admin/admin.php" class="nav-link <?= strpos($_SERVER['PHP_SELF'], 'admin/admin.php') !== false ? 'active' : '' ?>">Admin</a></li>
                     <?php endif; ?>
                     
                     <li class="user-menu">
@@ -38,9 +38,7 @@
                     <li><a href="<?= BASE_URL ?>auth/register.php" class="nav-link btn-register">Registar</a></li>
                 <?php endif; ?>
                 <!-- ir para o admin -->
-                <?php if (isset($_SESSION['user_admin']) && $_SESSION['user_admin'] === true): ?>
-                    <li><a href="<?= BASE_URL ?>Admin/admin.php" class="nav-link <?= strpos($_SERVER['PHP_SELF'], 'Admin/admin.php') !== false ? 'active' : '' ?>">Admin</a></li>
-                <?php endif; ?>
+                
             </ul>
         </nav>
     </div>
