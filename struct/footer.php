@@ -36,6 +36,6 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; <?= date('Y') ?> DashBoard. Todos os direitos reservados. | <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+        <p>&copy; <?= date('Y') ?> BetuelRS. Todos os direitos reservados. | <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
     </div>
 </footer>
