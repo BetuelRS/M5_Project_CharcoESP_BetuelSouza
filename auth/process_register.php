@@ -38,7 +38,7 @@ if (!empty($errors)) {
     exit();
 }
 
-// Insere no banco com senha em texto plano (NÃO SEGURO)
+
 $stmt = $conn->prepare("INSERT INTO utilizadores (nome_completo, username, email, password, ADMIN) VALUES (?, ?, ?, ?, 0)");
 $stmt->bind_param("ssss", $nome_completo, $username, $email, $password);
 

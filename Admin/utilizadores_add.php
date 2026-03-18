@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    // Prepared statement para evitar SQL injection
+    // Prepared statement 
     $stmt = $conn->prepare("INSERT INTO utilizadores (username, password, email, nome_completo, ADMIN) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("ssssi", $username, $password, $email, $nome_completo, $admin);
 

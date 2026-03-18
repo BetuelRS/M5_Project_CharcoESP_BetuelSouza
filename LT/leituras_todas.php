@@ -11,7 +11,7 @@ if (!in_array($order, $allowed_orders)) {
     $order_dir = 'DESC';
 }
 
-// Mapear nome da coluna para a expressão SQL (para sensor_nome, precisamos do alias)
+
 $order_column = ($order === 'sensor_nome') ? 's.nome' : "l.$order";
 
 $sql = "SELECT l.cod_leituras, s.nome AS sensor_nome, l.valor, l.unidade, l.data_hora

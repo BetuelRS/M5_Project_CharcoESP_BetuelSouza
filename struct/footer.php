@@ -1,4 +1,4 @@
-<!-- Footer melhorado -->
+<!-- Footer -->
 <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-column">

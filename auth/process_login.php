@@ -25,7 +25,6 @@ $result = $stmt->get_result();
 
 if ($result->num_rows === 1) {
     $user = $result->fetch_assoc();
-    // Comparação direta de senha em texto plano (NÃO SEGURO para produção)
     if ($password === $user['password']) {
         // Login bem-sucedido
         $_SESSION['user_id'] = $user['cod_utilizador'];

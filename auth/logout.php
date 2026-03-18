@@ -1,10 +1,8 @@
 <?php
 require_once __DIR__ . '/../config.php';
 
-// Destroi todas as variáveis de sessão
-$_SESSION = array();
 
-// Se usa cookies de sessão, apague o cookie
+$_SESSION = array();
 if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
     setcookie(session_name(), '', time() - 42000,
@@ -12,10 +10,6 @@ if (ini_get("session.use_cookies")) {
         $params["secure"], $params["httponly"]
     );
 }
-
-// Finalmente, destrói a sessão
 session_destroy();
-
-// Redireciona para a página inicial
 header('Location: ' . BASE_URL . 'index.php');
 exit();

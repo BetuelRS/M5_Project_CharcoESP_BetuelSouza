@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    // Prepared statement para evitar SQL injection
+    // Prepared statement 
     $stmt = $conn->prepare("UPDATE utilizadores SET username = ?, password = ?, email = ?, nome_completo = ?, ADMIN = ? WHERE cod_utilizador = ?");
     $stmt->bind_param("ssssii", $username, $password, $email, $nome_completo, $admin, $id);
 

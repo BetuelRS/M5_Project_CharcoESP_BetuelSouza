@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../config.php';
 include BASE_PATH . 'db.php';
 
-// Verifica se o usuário está logado (se necessário)
+// Verifica se o usuário está logado
 if (!isset($_SESSION['user_id'])) {
     header('Location: ' . BASE_URL . 'auth/login.php');
     exit();

@@ -6,7 +6,6 @@ include BASE_PATH . 'db.php';
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['cod_sensor'])) {
     $cod_sensor = intval($_GET['cod_sensor']);
 
-    // Previne SQL Injection usando intval (já feito)
     $sql = "DELETE FROM sensores WHERE cod_sensor = $cod_sensor";
     
     if ($conn->query($sql) === TRUE) {

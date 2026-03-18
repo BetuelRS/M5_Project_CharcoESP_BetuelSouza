@@ -1,4 +1,4 @@
-<!-- Header com tema ambiental -->
+<!-- Header -->
 <header class="site-header">
     <div class="header-container">
         <div class="logo">
@@ -37,7 +37,7 @@
                     <li><a href="<?= BASE_URL ?>auth/login.php" class="nav-link">Entrar</a></li>
                     <li><a href="<?= BASE_URL ?>auth/register.php" class="nav-link btn-register">Registar</a></li>
                 <?php endif; ?>
-                <!-- ir para o admin -->
+                
                 
             </ul>
         </nav>
