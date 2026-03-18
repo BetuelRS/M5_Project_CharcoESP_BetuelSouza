@@ -4,7 +4,7 @@
         <div class="logo">
             <a href="<?= BASE_URL ?>index.php">
                 <i class="fas fa-leaf"></i> 
-                <span>EcoMonitor</span>
+                <span>DashBoard ESP</span>
             </a>
         </div>
         
